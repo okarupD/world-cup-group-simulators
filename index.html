@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cup 2026 Group Simulator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">FIFA World Cup 2026</p>
+          <h1>Group Simulator</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="data-pill">2026 実データ</span>
+          <button class="ghost-button" id="reset-all" type="button">全リセット</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="group-rail" aria-label="グループ選択">
+          <div class="rail-header">
+            <span>Groups</span>
+            <span id="completion-count">0 / 72</span>
+          </div>
+          <div class="group-tabs" id="group-tabs"></div>
+        </aside>
+
+        <section class="workspace" aria-live="polite">
+          <div class="selected-group" id="selected-group"></div>
+          <div class="fixtures-panel" id="fixtures-panel"></div>
+          <div class="standings-panel" id="standings-panel"></div>
+        </section>
+
+        <section class="overview" aria-label="進出予想">
+          <div class="section-heading">
+            <p class="eyebrow">Round of 32</p>
+            <h2>進出予想</h2>
+          </div>
+          <div class="overview-grid" id="overview-grid"></div>
+          <div class="third-place-panel">
+            <div class="section-heading compact">
+              <p class="eyebrow">Best Thirds</p>
+              <h2>3位ランキング</h2>
+            </div>
+            <div id="third-place-table"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
